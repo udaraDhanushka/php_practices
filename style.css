@@ -1,0 +1,127 @@
+/* Reset some basic styles for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container for the form */
+main {
+    background-color: #ffffff;
+    padding: 60px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 600px;
+    max-width: 90%;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Form heading (optional) */
+form::before {
+    content: "Registration Form";
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Styling the form fields */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+form label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #555555;
+}
+
+/* Input and select styling */
+form input[type="text"],
+form select {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form select:focus {
+    border-color: #6a82fb;
+    background-color: #ffffff;
+    outline: none;
+}
+
+/* Submit button styling */
+button {
+    display: block  ;
+    margin: 50px auto 0;
+    padding: 12px 130px;
+    background-color: #6a82fb;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    justify-content: center;
+    align-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for the button */
+button:hover {
+    background-color: #4e63d4;
+    transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    main {
+        padding: 30px 20px;
+        width: 100%;
+    }
+
+    form::before {
+        font-size: 20px;
+    }
+
+    form label {
+        font-size: 15px;
+    }
+
+    form input[type="text"],
+    form select {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 10px 18px;
+    }
+}
